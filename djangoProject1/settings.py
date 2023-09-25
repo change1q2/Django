@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    #两种注册方式
+    'projects.apps.ProjectsConfig',
+    'interfaces.apps.InterfacesConfig'
+
 ]
 
 MIDDLEWARE = [
