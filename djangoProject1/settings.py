@@ -48,7 +48,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
+    #"django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -79,13 +79,36 @@ WSGI_APPLICATION = "djangoProject1.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+#指定在全局配置文件settingspy中的DATABASES宇典里配置需要连接的数据库信息
 DATABASES = {
+    #指定数据库的别名/标签
+    #指定的是django默认使用的数据库
     "default": {
+        #指定当前使用的数据库引警
+        #django. db. backends. mysql、oracle、 sqlite3
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
+#使用mysql的方式
+
+# DATABASES = {
+#     #指定数据库的别名/标签
+#     #指定的是django默认使用的数据库
+#     "default": {
+#         #指定当前使用的数据库引警
+#         "ENGINE": "django.db.backends.mysql",
+#
+#         #指定数据库名称，如使用的是sqlite3，需要指定sqlite3文件的绝对路径
+#         "NAME": 'mydb',
+#         "USER": 'root',
+#         "PASSWORD": '123456',
+#         'PORT': 3306,
+#         'HOST': '127.0.0.1'
+#
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

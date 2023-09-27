@@ -29,10 +29,14 @@ urlpatterns = [
     # path("delete_project/",views.delete_project),
 
 
-    path('projects/<int:pk>/',views.get_projects),
-    re_path(r'^projects/(?P<pk>)/$', views.get_projects),
-    path('project/put/',views.index),
-    path("project/",include('projects.urls')),
+    # path('projects/<int:pk>/',views.get_projects),
+    # #re_path(r'^projects/(?P<pk>)/$', views.get_projects),
+    # re_path(r'^projects/(?P<pk>\d+)/$', views.get_projects),
+    #
+    # path('project/put/',views.index),
+    # path("project/",include('projects.urls')),
+
+    path('',include('projects.urls'))
 
 
 ]
