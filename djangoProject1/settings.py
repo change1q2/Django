@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    #两种注册方式
+    # 两种注册方式
     'projects.apps.ProjectsConfig',
-    'interfaces.apps.InterfacesConfig'
+    'interfaces.apps.InterfacesConfig',
+
+    # djangorestframework进行注册
+    'rest_framework'
 
 ]
 

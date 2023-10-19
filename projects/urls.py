@@ -13,10 +13,12 @@ urlpatterns = [
 
     # path("projects/", views.projects),
 
-    #使用类调用视图
-    #定义类视图的路由条目
-    #类视图as_view()
-    path('projects/<int:pk>/',views.ProjectcView.as_view())
+    # 使用类调用视图
+    # 定义类视图的路由条目
+    # 类视图as_view()
+    # path('projects/<int:pk>/',views.ProjectcView.as_view())
 
+    path('projects/', views.ProjectsView.as_view()),
+    path('projects/<int:pk>/', views.ProjectDetailView.as_view())
 
 ]
